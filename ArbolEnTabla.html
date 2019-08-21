@@ -1,0 +1,84 @@
+<script>
+function Arbol(n){//n corresponde a los niveles xd
+    tabla="<table border=1>";
+
+    h=(n*2)-1;  w=h;
+    m=n-1;
+    document.write("n=",n," h=",h," w=",w,"<br>");
+    document.write("m=",m);
+    
+    for(i=0;i<w;i++){
+        tabla+="<tr>";
+        //while(j<w){
+        for(j=0;j<w;j++){
+            //Primer Nivel - Nivel (0)
+            if(i==0){
+                if(j<m){
+                    tabla+="<td>&nbsp&nbsp&nbsp</td>";//Espacios    
+                }else{
+                    if(j==m){
+                        tabla+="<td>*</td>";//Root
+                    }else{
+                        if(j>m){
+                            tabla+="<td>&nbsp&nbsp&nbsp</td>";//Espacios    
+                        }
+                        if(j==w-1){
+                            tabla+="</tr><tr>";
+                        }
+                    }
+                }
+            }
+            
+            if(i>0 && i<=m){
+                if(j<(n-1)){
+                    tabla+="<td>&nbsp&nbsp&nbsp</td>";//Espacios    
+                }else{
+                    if(j>(n-1)){
+                        if(j<=m){
+                            tabla+="<td>*</td>";//Nodos
+                        }else{
+                            if(j==m+1){
+                                tabla+="<td>&nbsp&nbsp&nbsp</td>";//Espacios    
+                            }
+                            if(j>m){
+                                //if(j<m+(2*i)){
+                                if(j<m+i+1){                                    
+                                    tabla+="<td>*</td>";//Nodos
+                                }else{
+                                    tabla+="<td>&nbsp&nbsp&nbsp</td>";//Espacios    
+                                }
+
+                            }
+                        }
+                    }
+                    
+                }
+            }else{
+                if(i>m){
+                    if(j==m){
+                    tabla+="<td>*</td>";//Nodos
+                    }
+                    if(j<m){
+                        tabla+="<td>&nbsp&nbsp&nbsp</td>";//Espacios    
+                    }
+                    if(j>m){
+                        tabla+="<td>&nbsp&nbsp&nbsp</td>";//Espacios    
+                    }
+                }
+            }
+        }
+        
+        tabla+="</tr>";
+        n--;
+    }
+    
+    tabla+="</table>";
+    // document.write("<table border=10><tr><td>1</td></tr></table>");
+    document.write(tabla);
+    //return tabla; 
+}
+
+Arbol=new Arbol(6);
+
+
+</script>
