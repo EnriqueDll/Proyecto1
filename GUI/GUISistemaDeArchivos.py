@@ -9,7 +9,7 @@ class GUISistemaArchivo (QMainWindow):
 
     def __init__(self):
         super().__init__()
-        uic.loadUi("GuiSistemaArchivos.app",self)
+        uic.loadUi("GuiSistemaArchivos1.app",self)
         frame = self.frameGeometry()
         center = QDesktopWidget().availableGeometry().center()
         frame.moveCenter(center)
