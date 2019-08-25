@@ -13,6 +13,9 @@
   <property name="windowTitle">
    <string>Sistema de Archivos AED</string>
   </property>
+  <property name="toolTipDuration">
+   <number>1</number>
+  </property>
   <property name="styleSheet">
    <string notr="true">background-color:(255, 255, 255)</string>
   </property>
@@ -32,6 +35,25 @@
       <height>321</height>
      </rect>
     </property>
+    <property name="selectionMode">
+     <enum>QAbstractItemView::MultiSelection</enum>
+    </property>
+    <property name="currentRow">
+     <number>0</number>
+    </property>
+    <property name="sortingEnabled">
+     <bool>false</bool>
+    </property>
+    <item>
+     <property name="text">
+      <string> .</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string> . .</string>
+     </property>
+    </item>
    </widget>
    <widget class="QListWidget" name="ListTree_2">
     <property name="geometry">
@@ -42,6 +64,22 @@
       <height>321</height>
      </rect>
     </property>
+    <property name="selectionMode">
+     <enum>QAbstractItemView::MultiSelection</enum>
+    </property>
+    <property name="currentRow">
+     <number>1</number>
+    </property>
+    <item>
+     <property name="text">
+      <string> .</string>
+     </property>
+    </item>
+    <item>
+     <property name="text">
+      <string> . .</string>
+     </property>
+    </item>
    </widget>
    <widget class="QPushButton" name="CopyButtonTree_1">
     <property name="geometry">
@@ -92,6 +130,9 @@
     </property>
    </widget>
    <widget class="QPushButton" name="AddFileButton_1">
+    <property name="enabled">
+     <bool>true</bool>
+    </property>
     <property name="geometry">
      <rect>
       <x>90</x>
@@ -239,10 +280,10 @@
    <widget class="QLabel" name="label">
     <property name="geometry">
      <rect>
-      <x>160</x>
+      <x>180</x>
       <y>30</y>
-      <width>171</width>
-      <height>21</height>
+      <width>139</width>
+      <height>17</height>
      </rect>
     </property>
     <property name="text">
