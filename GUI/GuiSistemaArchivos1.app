@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>1012</width>
-    <height>534</height>
+    <height>533</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -39,7 +39,7 @@
      <enum>QAbstractItemView::MultiSelection</enum>
     </property>
     <property name="currentRow">
-     <number>0</number>
+     <number>-1</number>
     </property>
     <property name="sortingEnabled">
      <bool>false</bool>
